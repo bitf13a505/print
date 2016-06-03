@@ -18,7 +18,11 @@
 x64/
 x86/
 bld/
+<<<<<<< HEAD
 
+=======
+[Bb]in/
+>>>>>>> origin/master
 [Oo]bj/
 
 # Visual Studio 2015 cache/options directory
